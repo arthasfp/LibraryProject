@@ -3,7 +3,9 @@ package entity;
 import javax.persistence.*;
 import java.sql.Date;
 
-
+/**
+ * Created by Sergii on 25.03.2016.
+ */
 @Entity
 @Table(name = "author", schema = "", catalog = "library")
 public class AuthorEntity {

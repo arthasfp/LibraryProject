@@ -13,6 +13,11 @@
     <mapping class="entity.GenreEntity"/>
     <mapping class="entity.GroupsEntity"/>
     <mapping class="entity.PublisherEntity"/>
+    <mapping resource="entity/AuthorEntity.hbm.xml"/>
+    <mapping resource="entity/BookEntity.hbm.xml"/>
+    <mapping resource="entity/GenreEntity.hbm.xml"/>
+    <mapping resource="entity/GroupsEntity.hbm.xml"/>
+    <mapping resource="entity/PublisherEntity.hbm.xml"/>
 
 
   </session-factory>
