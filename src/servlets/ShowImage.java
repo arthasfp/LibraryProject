@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import controllers.SearchController;
+import controllers.BookListController;
 
 @WebServlet(name = "ShowImage",
 urlPatterns = {"/ShowImage"})
@@ -33,7 +33,7 @@ public class ShowImage extends HttpServlet {
         OutputStream out = response.getOutputStream();
         try {
             int id = Integer.valueOf(request.getParameter("id"));
-            SearchController searchController = (SearchController) request.getSession(false).getAttribute("searchController");
+            BookListController searchController = (BookListController) request.getSession(false).getAttribute("bookListController");
             byte[] image = searchController.getImage(id);
             response.setContentLength(image.length);
             out.write(image);

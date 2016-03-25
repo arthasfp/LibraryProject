@@ -8,6 +8,10 @@
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
 
     <application>
+        <locale-config>
+            <default-locale>ru_ru</default-locale>
+
+        </locale-config>
         <resource-bundle>
             <base-name>nls.messages</base-name>
             <var>msg</var>
