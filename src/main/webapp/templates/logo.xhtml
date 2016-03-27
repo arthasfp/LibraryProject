@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <div id="wrap">
+
+                <div class="logo">
+                    <a href="#">
+                        <h:graphicImage library="images/#{localeChanger.currentLocale}" name="logo.png"/>
+                    </a>
+                </div>
+
+                <div class="menu">
+
+                    <h:form>
+                        <ul>
+                            <li><a href="#">#{msg.new}</a></li>
+
+                            <li><p:commandLink update=":booksForm:booksList :lettersForm :booksCount" value="#{msg.popular}" actionListener="#{bookListController.fillBooksByRate()}"/>
+
+                            </li>
+                            <li><p:commandLink type="button" onclick="dlgAbout.show()" value="#{msg.about}" global="false"/>    </li>    
+                            <li><a href="#">#{msg.contacts}</a></li>
+                            <li><a href="#">#{msg.team}</a></li>
+                        </ul>
+                    </h:form>
+
+
+                </div>
+
+                <h:form>
+                    <p:commandLink value="#{msg.feedback}" action="#{mailController.showMailForm()}" styleClass="feedback" update=":formSendMail"/>
+                </h:form>
+                <div class="clear"></div>
+
+            </div>
+        </ui:composition>
+    </h:body>
+</html>
+
